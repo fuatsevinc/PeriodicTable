@@ -1,0 +1,887 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <div class="container mx-auto">
+
+        <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+            <div class="container flex flex-wrap justify-between items-center mx-auto">
+                <a href="http://www.fuatsevinc.com/" class="flex items-center">
+                    <img src="https://img.icons8.com/3d-fluency/512/link.png" class="mr-3 h-6 sm:h-9"
+                        alt="Flowbite Logo">
+                    <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Fuat Sevinc</span>
+                </a>
+                <div class="flex md:order-2">
+                    <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search"
+                        aria-expanded="false"
+                        class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-1">
+                        <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="sr-only">Search</span>
+                    </button>
+                    <div class="hidden relative md:block">
+                        <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                            <svg class="w-5 h-5 text-gray-500" aria-hidden="true" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="sr-only">Search icon</span>
+                        </div>
+                        <input type="text" id="search-navbar"
+                            class="block p-2 pl-10 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Search...">
+                    </div>
+                    <button data-collapse-toggle="navbar-search" type="button"
+                        class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                        aria-controls="navbar-search" aria-expanded="false">
+                        <span class="sr-only">Open menu</span>
+                        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="navbar-search">
+                    <div class="relative mt-3 md:hidden">
+                        <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                            <svg class="w-5 h-5 text-gray-500" aria-hidden="true" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <input type="text" id="search-navbar"
+                            class="block p-2 pl-10 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Search...">
+                    </div>
+                    <ul
+                        class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                        <li>
+                            <a href="#"
+                                class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                                aria-current="page">Home</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div>
+            <h1
+                class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl text-center lg:text-4xl dark:text-white">
+                Periyodik Tablo Elementler</h1>
+            <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Repellat itaque id, quidem animi ipsum tempora totam
+                reprehenderit earum ad unde blanditiis soluta, voluptates vitae, commodi nobis. Voluptatum voluptatibus
+                cumque sequi!</p>
+        </div>
+
+
+        <div class="px-2 mx-2 mt-12">
+            <div class="flex -mx-2">
+                <div class="w-1/3 px-2">
+                    <div class="bg-yellow-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">H</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-indigo-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">He</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex -mx-2 mt-3">
+                <div class="w-1/3 px-2">
+                    <div class="bg-red-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Li</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-green-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Be</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-red-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">B</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-yellow-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">C</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-yellow-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">N</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-yellow-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">O</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-gray-500 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">F</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-indigo-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Ne</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex -mx-2 mt-3">
+                <div class="w-1/3 px-2">
+                    <div class="bg-red-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Na</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-green-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Mg</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-green-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Al</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-red-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Si</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-yellow-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">P</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-yellow-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">S</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-gray-500 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Cl</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-indigo-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Ar</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex -mx-2 mt-3">
+                <div class="w-1/3 px-2">
+                    <div class="bg-red-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">K</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-green-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Ca</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Sc</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Ti</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">V</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Cr</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Mn</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Fe</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Co</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Ni</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Cu</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Zn</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-green-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Ga</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-red-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Ge</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-red-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">As</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-yellow-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Se</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-gray-500 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Br</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-indigo-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Kr</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex -mx-2 mt-3">
+                <div class="w-1/3 px-2">
+                    <div class="bg-red-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Rb</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-green-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Sr</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Y</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Zr</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Nb</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Mo</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Tc</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Ru</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Rh</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Pd</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Ag</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Cd</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-green-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">In</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-green-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Sn</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-red-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Sb</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-red-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Te</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-gray-500 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">I</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-indigo-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Xe</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex -mx-2 mt-3">
+                <div class="w-1/3 px-2">
+                    <div class="bg-red-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Cs</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-green-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Ba</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-pink-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">LN</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Hf</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Ta</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">W</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Re</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Os</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Ir</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Pt</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Au</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Hg</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-green-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">TI</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-green-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Pb</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-green-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Bi</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-red-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Po</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-gray-500 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">At</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-indigo-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Rn</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex -mx-2 mt-3">
+                <div class="w-1/3 px-2">
+                    <div class="bg-red-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Fr</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-green-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Ra</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-purple-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">AT</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Rf</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Db</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Sg</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Bh</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Hs</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Mt</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Ds</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Rg</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-blue-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Cn</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-green-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Nh</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-green-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Fl</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-green-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Mc</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-green-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Lv</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-gray-500 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Ts</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-indigo-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Og</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex -mx-2 mt-10">
+
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-pink-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">La</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-pink-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Ce</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-pink-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Pr</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-pink-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Nd</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-pink-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Pm</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-pink-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Sm</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-pink-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Eu</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-pink-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Gd</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-pink-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Tb</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-pink-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Dy</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-pink-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Ho</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-pink-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Er</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-pink-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Tm</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-pink-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Yb</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-pink-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Lu</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+            </div>
+
+            <div class="flex -mx-2 mt-3">
+
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-purple-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Ac</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-purple-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Th</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-purple-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Pa</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-purple-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">U</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-purple-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Np</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-purple-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Pu</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-purple-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Am</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-purple-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Cm</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-purple-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Bk</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-purple-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Cf</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-purple-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Es</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-purple-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Fm</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-purple-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Md</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-purple-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">No</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-purple-400 h-12">
+                        <h2 class="text-gray-700 text-center  p-2">Lr</h2>
+                    </div>
+                </div>
+                <div class="w-1/3 px-2">
+                    <div class="bg-white-400 h-12"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- !FOOTER -->
+        <footer
+            class="p-4 -mx-2 mt-10 bg-gray-200 rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
+            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a
+                    href="http://www.fuatsevin.com/" class="hover:underline">Fuatsevinc™</a>. All Rights Reserved.
+            </span>
+            <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
+                </li>
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6">Licensing</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline">Contact</a>
+                </li>
+            </ul>
+        </footer>
+        <!-- !FOOTER END -->
+
+</body>
+
+</html>
